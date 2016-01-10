@@ -59,8 +59,9 @@ slack.on('message', function(message) {
   //正常の場合
   if (type === 'message' && (text != null) && (channel != null)) {
     //response = text.split('').reverse().join('');
+    //text.text("//")
     response = text.split('').reverse().join('');
-    channel.send('<@' + user.id + '>開発中なのでちょっとまってね' );
+    channel.send('<@' + user.id + '>開発中なのでちょっとまってね.リポジトリはこれだよhttps://github.com/hiraokashi/tech-info-bot.git' );
     return console.log("@" + slack.self.name + " responded with \"" + response + "\"");
   } else {
     typeError = type !== 'message' ? "unexpected type " + type + "." : null;
